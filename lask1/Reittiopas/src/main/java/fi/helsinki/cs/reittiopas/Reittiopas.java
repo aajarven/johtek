@@ -1,5 +1,9 @@
 package fi.helsinki.cs.reittiopas;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Reittiopas {
 
     /**
@@ -16,8 +20,26 @@ public class Reittiopas {
      * @return Tila-olioista koostuva linkitetty lista maalista lähtötilaan
      */
     public Tila haku(Pysakki lahto, Pysakki maali) {
-        //toteuta leveyssuuntainen haku
-        //Tila tila = new Tila(lahto, null);
+        ArrayDeque<Pysakki> solmulista = new ArrayDeque<Pysakki>();
+        ArrayList<Pysakki> kasitellyt = new ArrayList<Pysakki>();
+        HashMap<Pysakki, Tila> reitit = new HashMap<Pysakki, Tila>();
+        reitit.put(lahto, new Tila(lahto, null));
+        solmulista.add(lahto);
+        
+        while(!solmulista.isEmpty()){
+            Pysakki tutkittava = solmulista.pop();
+            if (!kasitellyt.contains(tutkittava)){
+                kasitellyt.add(tutkittava);
+                Tila nykytila = reitit.get(tutkittava);
+                if (tutkittava.equals(maali)){
+                    return nykytila;
+                }
+                for (Pysakki pysakki: tutkittava.getNaapurit()){
+                    solmulista.add(pysakki);
+                    reitit.put(pysakki, new Tila(pysakki, nykytila));
+                }
+            }
+        }
         return null;
     }
 }
