@@ -1,3 +1,7 @@
 /lask2/alphabeta/build/
 /lask2/reittiopas/Reittiopas/target/
 *.class
+/lask3/Shakki/nbproject/private/
+/lask3/Shakki/build/
+/lask3/SpamHam/nbproject/private/
+/lask3/SpamHam/build/
