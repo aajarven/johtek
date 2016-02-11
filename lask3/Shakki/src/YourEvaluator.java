@@ -1,10 +1,20 @@
 
+import java.util.HashMap;
+
+
 public class YourEvaluator extends Evaluator {
 
+    //TODO: Yliretardisti mobility laskee tällä hetkellä myös syömispotentiaalin
+    
     /**
      * kerroin, jolla nappulan liikuttavissa olevien ruutujen määrä kerrotaan ennen hyvyyttä arvioivaan lukuun lisäämistä
      */
-    private final double liikkuvuuskerroin = 0.05;
+    private final double liikkuvuuskerroin = 0.1;
+    
+    /**
+     * bonus, jonka mahdollisuudesta syödä nappulan vastustaja saa
+     */
+    private final double syomisvakio = 1;
     
     public double eval(Position p) {
         double ret = 0;
@@ -76,6 +86,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x+d, y+d)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x+d][y+d])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -83,6 +96,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x-d, y+d)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x-d][y+d])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -90,6 +106,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x-d, y-d)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x-d][y-d])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -97,6 +116,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x+d, y-d)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x+d][y-d])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -117,6 +139,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x+d, y)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x+d][y])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -124,6 +149,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x-d, y)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x-d][y])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -131,6 +159,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x, y-d)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x][y-d])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -138,6 +169,9 @@ public class YourEvaluator extends Evaluator {
             if (onTyhja(p, x, y+d)) {
                 ret++;
             } else {
+                if (Position.isWhitePiece(p.board[x][y+d])){
+                    ret += syomisvakio/liikkuvuuskerroin;
+                }
                 break;
             }
         }
@@ -170,11 +204,15 @@ public class YourEvaluator extends Evaluator {
             if (y+1<Position.bRows){
                 if (onTyhja(p, x+2, y+1)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x+2][y+1])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
             if (y-1>=0){
                 if (onTyhja(p, x+2, y-1)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x+2][y-1])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
         }
@@ -182,11 +220,15 @@ public class YourEvaluator extends Evaluator {
             if (y+1<Position.bRows){
                 if (onTyhja(p, x-2, y+1)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x-2][y+1])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
             if (y-1>=0){
                 if (onTyhja(p, x-2, y-1)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x-2][y-1])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
         }
@@ -194,11 +236,15 @@ public class YourEvaluator extends Evaluator {
             if (y+2<Position.bRows){
                 if (onTyhja(p, x+1, y+2)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x+1][y+2])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
-            if (y-1>=0){
+            if (y-2>=0){
                 if (onTyhja(p, x+1, y-2)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x+1][y-2])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
         }
@@ -206,11 +252,15 @@ public class YourEvaluator extends Evaluator {
             if (y+2<Position.bRows){
                 if (onTyhja(p, x-1, y+2)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x-1][y+2])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
             if (y-2>=0){
                 if (onTyhja(p, x-1, y-2)){
                     ret++;
+                } else if (Position.isWhitePiece(p.board[x-1][y-2])){
+                    ret += syomisvakio/liikkuvuuskerroin;
                 }
             }
         }
