@@ -1,4 +1,4 @@
-package perceptron;
+package lahinnaapuri;
 
 public class Image implements Comparable<Image> {
 
