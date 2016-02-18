@@ -1,0 +1,135 @@
+Learning to classify 1 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.4524886877828055 %
+------
+Learning to classify 2 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.912621359223301 %
+------
+Learning to classify 2 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.9950248756218906 %
+------
+Learning to classify 3 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.8771929824561403 %
+------
+Learning to classify 3 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.7937219730941705 %
+------
+Learning to classify 3 vs 2
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.8846153846153846 %
+------
+Learning to classify 4 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.9900497512437811 %
+------
+Learning to classify 4 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.0204081632653061 %
+------
+Learning to classify 4 vs 2
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.6574585635359116 %
+------
+Learning to classify 4 vs 3
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.0 %
+------
+Learning to classify 5 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.5181347150259068 %
+------
+Learning to classify 5 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.127659574468085 %
+------
+Learning to classify 5 vs 2
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.312138728323699 %
+------
+Learning to classify 5 vs 3
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 4.102564102564102 %
+------
+Learning to classify 5 vs 4
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 3.571428571428571 %
+------
+Learning to classify 6 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.9090909090909091 %
+------
+Learning to classify 6 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.46511627906976744 %
+------
+Learning to classify 6 vs 2
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 3.5000000000000004 %
+------
+Learning to classify 6 vs 3
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.8018018018018018 %
+------
+Learning to classify 6 vs 4
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.051282051282051 %
+------
+Learning to classify 6 vs 5
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.6737967914438503 %
+------
+Learning to classify 7 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.9345794392523363 %
+------
+Learning to classify 7 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.9569377990430622 %
+------
+Learning to classify 7 vs 2
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.5773195876288657 %
+------
+Learning to classify 7 vs 3
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.314814814814815 %
+------
+Learning to classify 7 vs 4
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.5291005291005291 %
+------
+Learning to classify 7 vs 5
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.1049723756906076 %
+------
+Learning to classify 7 vs 6
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.4807692307692308 %
+------
+Learning to classify 8 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.9801980198019802 %
+------
+Learning to classify 8 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.5380710659898478 %
+------
+Learning to classify 8 vs 2
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 4.945054945054945 %
+------
+Learning to classify 8 vs 3
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 4.901960784313726 %
+------
+Learning to classify 8 vs 4
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.0 %
+------
+Learning to classify 8 vs 5
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.9585798816568047 %
+------
+Learning to classify 8 vs 6
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.530612244897959 %
+------
+Learning to classify 8 vs 7
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.0526315789473684 %
+------
+Learning to classify 9 vs 0
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.82648401826484 %
+------
+Learning to classify 9 vs 1
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 0.46728971962616817 %
+------
+Learning to classify 9 vs 2
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.0100502512562812 %
+------
+Learning to classify 9 vs 3
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.809954751131222 %
+------
+Learning to classify 9 vs 4
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 4.123711340206185 %
+------
+Learning to classify 9 vs 5
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 2.1505376344086025 %
+------
+Learning to classify 9 vs 6
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.4084507042253522 %
+------
+Learning to classify 9 vs 7
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 7.729468599033816 %
+------
+Learning to classify 9 vs 8
+Perceptron learning algorithm, 1000000 iterations...Failure rate: 1.5384615384615385 %
+------

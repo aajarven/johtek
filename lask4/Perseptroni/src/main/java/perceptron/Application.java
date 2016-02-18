@@ -19,25 +19,25 @@ public class Application {
      * @param args
      */
     public static void main(String[] args) {
-        int steps = 100;
+        int steps = 1000000;
 
         if (args.length > 0) {
             steps = Integer.parseInt(args[0]);
         }
 
-        int targetChar = 3; // tämä on plus-luokka
-        int oppositeChar = 5; // tämä on miinus-luokka
-
-        System.out.println("Learning to classify " + targetChar + " vs " + oppositeChar);
         List<Image> images = readImages();
         testInput(images); //tekee testikuvan (test100.bmp) projektin juureen 
-
         Perceptron perceptron = new Perceptron(images);
-        System.out.print("Perceptron learning algorithm, " + steps + " iterations...");
-        double[] w = perceptron.train(targetChar, oppositeChar, steps);
-        visualizeWeights(w); //tallentaa kuvan (weights.bmp) projektin juureen
-        System.out.println(" complete");
-        System.out.println("Failure rate: " + 100 * test(w, images, targetChar, oppositeChar) + " %");
+        
+        for (int target = 0; target < 10; target++) {
+            for (int opposite = 0; opposite < target; opposite++) {
+                System.out.println("Learning to classify " + target + " vs " + opposite);
+                System.out.print("Perceptron learning algorithm, " + steps + " iterations...");
+                double[] w = perceptron.train(target, opposite, steps);
+                System.out.println("Failure rate: " + 100 * test(w, images, target, opposite) + " %");
+                System.out.println("------");
+            }
+        }
     }
 
     // lukee x- ja y-tiedostot
@@ -100,7 +100,7 @@ public class Application {
                     int ind = y * 28 + x;
                     bi.setRGB(x + i * 28, y,
                             (i100.get(i).vec[ind] > 0.5
-                            ? 0 : 0xffffff));
+                                    ? 0 : 0xffffff));
                 }
             }
         }
