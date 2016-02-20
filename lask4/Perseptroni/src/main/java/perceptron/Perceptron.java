@@ -36,6 +36,19 @@ public class Perceptron {
             }
             step++;
 
+            double z = 0;
+            for (int i=0; i<w.length; i++){
+                z += images.get(example).vec[i]*w[i];
+            }
+            if (z >= 0 && images.get(example).characterClass == oppositeChar){
+                for (int i=0; i<w.length; i++){
+                    w[i] -= images.get(example).vec[i];
+                }
+            } else if (z < 0 && images.get(example).characterClass == targetChar){
+                for(int i=0; i<w.length; i++){
+                    w[i] += images.get(example).vec[i];
+                }
+            }
             //...
         }
         return w;
